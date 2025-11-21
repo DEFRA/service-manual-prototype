@@ -3,4 +3,536 @@
 // https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
 // 
 
-// Add extra styles here
+// Manual navigation styles
+.manual-navigation__link--current {
+  font-weight: bold;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* ==== Header & nav ==== */
+
+/* Single layout container for everything under the top of the page */
+.defra-header__inner,
+.defra-primary-nav__inner,
+.defra-hero__inner,
+.defra-main-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Override vertical padding where needed */
+.defra-primary-nav__inner {
+  padding-top: 8px;
+  padding-bottom: 6px;
+}
+
+.defra-hero__inner {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.defra-main-inner {
+  margin-bottom: 60px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* OLD HEADER RULES - COMMENTED OUT
+.defra-header {
+  background-color: #ffffff;
+  border-bottom: none;
+}
+
+.defra-header__inner {
+  padding-top: 16px;
+  padding-bottom: 14px;
+}
+
+.defra-header__top-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.defra-header__brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.defra-header__logo {
+  display: inline-block;
+  height: 64px;
+  width: auto;
+  vertical-align: middle;
+  filter: none;
+}
+
+.defra-header__service-name {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  color: #005a30;
+}
+*/
+
+/* Primary nav container unchanged */
+.defra-primary-nav {
+  background-color: #005a30;
+  margin-bottom: 0;
+}
+
+.defra-primary-nav__inner {
+  padding-top: 8px;
+  padding-bottom: 6px;
+}
+
+.defra-primary-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;           /* keep everything on one line at this width */
+  gap: 20px;                   /* slightly tighter gap so six items fit */
+}
+
+/* Links: white, underlined, normal weight (GDS-ish) */
+.defra-primary-nav__link,
+.defra-primary-nav__link:link,
+.defra-primary-nav__link:visited {
+  color: #ffffff !important;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  font-size: 16px;
+  font-weight: 400; /* unbold */
+}
+
+/* Hover/focus: keep underline, don't change colour */
+.defra-primary-nav__link:hover,
+.defra-primary-nav__link:focus,
+.defra-primary-nav__link--current,
+.defra-primary-nav__link--current:link,
+.defra-primary-nav__link--current:visited {
+  color: #ffffff !important;
+  text-decoration: underline;
+}
+
+/* ==== Hero ==== */
+
+.defra-hero {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+
+  background-color: #005a30;
+  color: #ffffff;
+  padding: 40px 0;
+  margin-top: 0;
+}
+
+
+.defra-hero .govuk-heading-xl,
+.defra-hero .govuk-body-l {
+  color: #ffffff;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.defra-hero__whats-new {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 16px 20px;
+  background-color: transparent;
+}
+
+.defra-hero__whats-new,
+.defra-hero__whats-new * {
+  color: #ffffff;
+}
+
+// Homepage-specific: remove top padding between header and hero
+.defra-manual-home .govuk-main-wrapper {
+  padding-top: 0;
+}
+
+/* ==== Main inner container ==== */
+
+/* ==== Version banner ==== */
+
+/* Version banner now aligns with headings and cards */
+.defra-version-banner {
+  margin: 20px 0 32px;
+  padding: 12px 15px;
+  border: 1px solid #b1b4b6;
+  background-color: #f3f2f1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+.defra-version-banner__label {
+  display: inline-block;
+  padding: 2px 8px 3px;
+  background-color: #b1b4b6;
+  color: #0b0c0c;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.defra-version-banner__text {
+  font-size: 14px;
+}
+
+/* ==== Tiles ==== */
+
+/* Base card */
+.defra-tile {
+  display: block;
+  border: 1px solid #b1b4b6;
+  padding: 18px 18px 22px;
+  text-decoration: none;   /* remove underline from the whole card */
+  color: #0b0c0c;          /* body copy stays black */
+  background-color: #ffffff;
+  min-height: 140px;
+  transform: translateY(0);
+  transition: border-color 0.1s ease-out,
+              box-shadow 0.1s ease-out,
+              background-color 0.1s ease-out,
+              transform 0.1s ease-out;
+}
+
+/* Hover: subtle, brand-y, not shouty */
+.defra-tile:hover {
+  border-color: #005a30;              /* Defra green */
+  background-color: #f3f2f1;          /* light GOV.UK grey */
+  box-shadow: 0 2px 0 #0b0c0c;        /* tiny drop shadow like GOV.UK buttons */
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+/* Focus: keep strong GOV.UK yellow for accessibility */
+.defra-tile:focus-visible {
+  border-color: #0b0c0c;              /* dark border so yellow ring has contrast */
+  outline: 3px solid #fd0;            /* GOV.UK yellow focus ring */
+  outline-offset: 0;
+  box-shadow: 0 0 0 1px #0b0c0c;      /* inner border so the card edge doesn't disappear */
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+/* Fallback for browsers without :focus-visible support */
+.defra-tile:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Card titles should look like links (GOV.UK style) */
+.defra-tile__title {
+  margin-bottom: 8px;
+}
+
+/* Normal + visited state: GOV.UK link blue and underlined */
+.defra-tile:link .defra-tile__title,
+.defra-tile:visited .defra-tile__title {
+  color: #1d70b8;                /* GOV.UK link blue */
+  text-decoration: underline;
+}
+
+/* Hover / focus: keep underline, colour can stay the same */
+.defra-tile:hover .defra-tile__title,
+.defra-tile:focus-visible .defra-tile__title {
+  color: #1d70b8;
+  text-decoration: underline;
+}
+
+.defra-tile__body {
+  margin-bottom: 0;
+}
+
+/* ==== Sections ==== */
+
+/* Sections just handle vertical spacing; width comes from defra-main-inner */
+.defra-section {
+  margin-top: 40px;
+}
+
+.defra-section:first-of-type {
+  margin-top: 0;
+}
+
+/* Grid rows need only vertical spacing now */
+.defra-tile-grid {
+  margin: 16px -15px 24px;  /* negative margins to align cards with headings */
+  padding: 0;
+}
+
+/* ==== Support section ==== */
+
+.defra-support {
+  max-width: 960px;
+  margin: 40px auto 60px;
+  padding: 0 15px;
+}
+
+/* === Core layout containers === */
+
+/* Hero and main content share the same width and padding */
+.defra-hero__inner,
+.defra-main-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Main inner just controls spacing below the hero */
+.defra-main-inner {
+  margin-bottom: 60px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* === Version banner – align text with hero + headings === */
+
+.defra-version-banner {
+  margin: 20px 0 32px;
+  padding: 12px 15px;          /* text starts at same 15px column as hero */
+  border: 1px solid #b1b4b6;
+  background-color: #f3f2f1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+.defra-version-banner__label {
+  display: inline-block;
+  padding: 2px 8px 3px;
+  background-color: #b1b4b6;
+  color: #0b0c0c;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.defra-version-banner__text {
+  font-size: 14px;
+}
+
+/* === Sections under the version banner === */
+
+.defra-section {
+  margin-top: 40px;
+}
+
+/* First section sits right under the banner */
+.defra-section:first-of-type {
+  margin-top: 0;
+}
+
+/* === Card grid alignment === */
+
+/* Use GOV.UK grid pattern so card borders align with headings */
+.defra-tile-grid {
+  margin: 16px -15px 24px;     /* negative margins cancel the 15px container padding */
+  padding: 0;
+}
+
+/* ===== Canonical layout containers ===== */
+
+/* Single canonical content column for Defra manual pages */
+.defra-width-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Header, nav, hero and main content all share the same column */
+.defra-primary-nav__inner,
+.defra-hero__inner,
+.defra-main-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* .defra-header__inner removed - now handled by new header rules at end of file */
+
+.defra-primary-nav__inner {
+  padding-top: 8px;
+  padding-bottom: 6px;
+}
+
+.defra-hero__inner {
+  padding-top: 24px;
+  padding-bottom: 32px;
+}
+
+.defra-main-inner {
+  padding-top: 0;
+  padding-bottom: 60px;
+}
+
+/* Version banner fills the same column */
+.defra-version-banner {
+  margin: 16px 0 32px;
+  margin-top: 16px;     /* instead of 20px */
+  padding: 12px 15px;
+  border: 1px solid #b1b4b6;
+  background-color: #f3f2f1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+/* Card grids: use GOV.UK grid alignment so card borders line up with headings */
+.defra-tile-grid {
+  margin: 16px -15px 24px; /* cancel the 15px container padding */
+  padding: 0;
+}
+
+/* Let defra-width-container control width; these just handle vertical spacing */
+.defra-primary-nav__inner,
+.defra-main-inner {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.defra-primary-nav__inner {
+  padding-top: 8px;
+  padding-bottom: 6px;
+}
+
+.defra-main-inner {
+  padding-top: 0;
+  padding-bottom: 60px;
+}
+
+.defra-hero {
+  background-color: #005a30;
+  color: #ffffff;
+  padding: 32px 0;
+  padding-bottom: 32px; /* if it's 40px now, shave a little off */
+}
+
+.defra-section > .govuk-body {
+  margin-bottom: 12px; /* instead of 16/20 */
+}
+
+/* Card grid still uses GOV.UK negative margins to align borders with headings */
+.defra-tile-grid {
+  margin: 16px -15px 24px;
+  padding: 0;
+}
+
+/* ===== Header with service name + search (final version) ===== */
+
+.defra-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #b1b4b6;
+}
+
+/* Header layout: logo left, search right */
+.defra-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 12px;
+  padding-bottom: 10px;
+}
+
+/* Brand group */
+.defra-header__brand-group {
+  display: flex;
+  align-items: center;
+}
+
+.defra-header__logo {
+  height: 60px;
+  width: auto;
+}
+
+/* Search form in header */
+.defra-header-search {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+}
+
+/* Override govuk-input's full width in this context */
+.defra-header-search__input {
+  width: 200px;                 /* narrower, feels more like a header search */
+  max-width: 100%;
+  font-size: 16px;
+}
+
+/* Lighten the button a bit, keep GOV.UK styling */
+.defra-header-search__button {
+  margin: 0;
+  padding: 6px 14px;            /* smaller than default GOV.UK button */
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+/* ===== NHS-style header search ===== */
+
+.defra-header-search--nhs {
+  display: inline-flex;
+  align-items: stretch;
+  border: 1px solid #0b0c0c;
+  background-color: #ffffff;
+  /* optional: uncomment for slightly rounded NHS look */
+  /* border-radius: 4px; */
+}
+
+/* Override govuk-input defaults in header */
+.defra-header-search__input {
+  border: 0;
+  box-shadow: none;
+  width: 220px;
+  max-width: 100%;
+  padding: 6px 10px;
+  font-size: 16px;
+}
+
+/* Icon button on the right */
+.defra-header-search__button {
+  border: 0;
+  border-left: 1px solid #0b0c0c;
+  background-color: #f3f2f1;
+  padding: 0;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Icon style */
+.defra-header-search__icon {
+  width: 16px;
+  height: 16px;
+  stroke: #0b0c0c;
+  fill: none;
+}
+
+/* Focus state – GOV.UK yellow ring around the whole control */
+.defra-header-search--nhs:focus-within {
+  outline: 3px solid #ffbf47;
+  outline-offset: 1px;
+}

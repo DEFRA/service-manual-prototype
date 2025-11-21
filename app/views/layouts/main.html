@@ -4,3 +4,32 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 #}
 
 {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% block header %}
+
+<header class="defra-header">
+  <div class="defra-width-container defra-header__inner">
+
+    <div class="defra-header__brand-group">
+      <img
+        src="/public/images/defra-logo.svg"
+        alt="Department for Environment, Food &amp; Rural Affairs"
+        class="defra-header__logo">
+    </div>
+
+    {% include "includes/header-search.njk" %}
+
+  </div>
+</header>
+
+<nav class="defra-primary-nav">
+  <div class="defra-width-container defra-primary-nav__inner">
+    <ul class="defra-primary-nav__list">
+      <li><a href="/service-standard" class="defra-primary-nav__link">Service standard</a></li>
+      <li><a href="/service-assessments" class="defra-primary-nav__link">Service assessments</a></li>
+      <li><a href="/accessibility" class="defra-primary-nav__link">Accessibility</a></li>
+    </ul>
+  </div>
+</nav>
+
+{% endblock %}
