@@ -132,11 +132,11 @@
   margin-left: -50vw;
   margin-right: -50vw;
   width: 100vw;
-
   background-color: #005a30;
   color: #ffffff;
   padding: 40px 0;
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 
@@ -158,9 +158,10 @@
   color: #ffffff;
 }
 
-// Homepage-specific: remove top padding between header and hero
-.defra-manual-home .govuk-main-wrapper {
+// Remove top padding between header and hero for all pages
+.govuk-main-wrapper {
   padding-top: 0;
+  overflow-x: visible;
 }
 
 /* ==== Main inner container ==== */
@@ -421,12 +422,7 @@
   padding-bottom: 60px;
 }
 
-.defra-hero {
-  background-color: #005a30;
-  color: #ffffff;
-  padding: 32px 0;
-  padding-bottom: 32px; /* if it's 40px now, shave a little off */
-}
+/* .defra-hero definition consolidated above - removing duplicate */
 
 .defra-section > .govuk-body {
   margin-bottom: 12px; /* instead of 16/20 */

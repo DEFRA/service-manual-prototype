@@ -8,7 +8,7 @@ const router = govukPrototypeKit.requests.setupRouter()
 
 // Manual routes
 router.get('/', function (req, res) {
-  res.render('manual/index')
+  res.render('index')
 })
 
 router.get('/service-standard', function (req, res) {
@@ -29,4 +29,8 @@ router.get('/accessibility', function (req, res) {
 
 router.get('/working-with-defra', function (req, res) {
   res.render('manual/working-with-defra')
+})
+
+router.get('/service-manual', function (req, res) {
+  res.render('service-manual-home')
 })
