@@ -1,24 +1,18 @@
-{#
-For guidance on how to use layouts see:
-https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
-#}
-
-{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
-
-{% block header %}
+{# For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts #} {% extends
+"govuk-prototype-kit/layouts/govuk-branded.njk" %} {% block header %}
 
 <header class="defra-header">
   <div class="defra-width-container defra-header__inner">
-
     <div class="defra-header__brand-group">
       <img
         src="/public/images/defra-logo.svg"
         alt="Department for Environment, Food &amp; Rural Affairs"
-        class="defra-header__logo">
+        class="defra-header__logo"
+      />
     </div>
 
     {% include "includes/header-search.njk" %}
-
   </div>
 </header>
 
