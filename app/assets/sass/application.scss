@@ -457,9 +457,25 @@
   align-items: center;
 }
 
+.defra-header__logo-link {
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.defra-header__logo-link:hover {
+  text-decoration: none;
+}
+
+.defra-header__logo-link:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 2px;
+}
+
 .defra-header__logo {
   height: 60px;
   width: auto;
+  display: block;
 }
 
 /* Search form in header */
@@ -532,3 +548,125 @@
   outline: 3px solid #ffbf47;
   outline-offset: 1px;
 }
+
+/* Custom Sub-Navigation Pattern (NHS/GDS Hybrid) */
+.app-subnav__header {
+  font-family: "GDS Transport", arial, sans-serif;
+  font-weight: bold;
+  font-size: 19px; /* govuk-heading-s size */
+  line-height: 1.25;
+  color: #0b0c0c; /* GDS black */
+  margin-top: 24px; /* Tighter spacing - first group has less top margin */
+  margin-bottom: 8px; /* Tighter gap between header and links */
+}
+
+.app-subnav__header:first-child {
+  margin-top: 0; /* No top margin on first header */
+}
+
+.app-subnav__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-left: 1px solid #b1b4b6; /* Thin grey line for the whole list */
+}
+
+.app-subnav__item {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.app-subnav__link {
+  display: block;
+  padding: 8px 15px;
+  text-decoration: none;
+  color: #1d70b8; /* Default: blue for unvisited links (GDS standard) */
+  border-left: 4px solid transparent; /* Invisible border by default */
+  margin-left: -1px; /* Overlap the grey line */
+}
+
+/* Visited links - purple (GDS standard) - this will override the default blue */
+.app-subnav__link:visited {
+  color: #4c2c92; /* GDS purple for visited links */
+}
+
+/* Hover state - darker blue for unvisited, darker purple for visited */
+.app-subnav__link:hover {
+  background-color: #f3f2f1;
+}
+
+.app-subnav__link:not(:visited):hover {
+  color: #003078; /* Darker blue on hover for unvisited */
+}
+
+.app-subnav__link:visited:hover {
+  color: #2e1f5e; /* Darker purple for visited links on hover */
+}
+
+/* Active state - current page is black, NOT bold (GDS standard) */
+.app-subnav__link[aria-current="page"] {
+  font-weight: normal; /* No bold for active state */
+  color: #0b0c0c; /* Black for current page */
+  border-left: 4px solid #005a30; /* Defra green border */
+  background-color: #f3f2f1;
+}
+
+/* Custom Sub-Navigation Pattern */
+.app-sub-navigation__list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.app-sub-navigation__link {
+  display: block;
+  padding: 8px 15px;
+  text-decoration: none;
+  color: #1d70b8; /* Default: blue for unvisited links (GDS standard) */
+  border-left: 4px solid transparent; /* Invisible border by default */
+}
+
+/* Visited links - purple (GDS standard) - this will override the default blue */
+.app-sub-navigation__link:visited {
+  color: #4c2c92; /* GDS purple for visited links */
+}
+
+/* Hover state - darker blue for unvisited, darker purple for visited */
+.app-sub-navigation__link:hover {
+  background-color: #f3f2f1;
+}
+
+.app-sub-navigation__link:not(:visited):hover {
+  color: #003078; /* Darker blue on hover for unvisited */
+}
+
+.app-sub-navigation__link:visited:hover {
+  color: #2e1f5e; /* Darker purple for visited links on hover */
+}
+
+/* Active state - current page is black, NOT bold (GDS standard) */
+.app-sub-navigation__link[aria-current="page"] {
+  font-weight: normal; /* No bold for active state */
+  color: #0b0c0c; /* Black for current page */
+  border-left: 4px solid #005a30; /* Defra green border */
+  background-color: #f3f2f1; /* Light background for active area */
+}
+
+/* Section headers */
+.app-sub-navigation__header {
+  font-family: "GDS Transport", arial, sans-serif;
+  font-weight: bold;
+  font-size: 19px; /* govuk-heading-s size */
+  line-height: 1.25;
+  margin-bottom: 8px; /* Tighter gap between header and links */
+  margin-top: 24px; /* Tighter spacing */
+  color: #0b0c0c; /* GDS black */
+  border-bottom: 1px solid #b1b4b6;
+  padding-bottom: 5px;
+}
+
+.app-sub-navigation__header:first-child {
+  margin-top: 0; /* No top margin on first header */
+}
+

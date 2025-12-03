@@ -1,0 +1,307 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+
+  Service assessments - Defra Service Manual
+
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukBreadcrumbs({
+  items: [
+    { text: "Defra Service Manual", href: "/" },
+    { text: "Service assessments" }
+  ]
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    <span class="govuk-caption-xl">Standards and assurance</span>
+
+    <h1 class="govuk-heading-xl">Service assessments</h1>
+
+
+
+    <p class="govuk-body-l">
+
+      All transactional government digital services need an independent assessment to ensure they are fit for purpose, technically robust, and secure.
+
+    </p>
+
+
+
+    <h2 class="govuk-heading-l">When you need an assessment</h2>
+
+    <p class="govuk-body">
+
+      You will need a service assessment if your service:
+
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+
+      <li>is going on GOV.UK</li>
+
+      <li>has a spend approval condition that requires assessment</li>
+
+      <li>is transactional (it involves money, data, or a change of circumstances)</li>
+
+    </ul>
+
+
+
+    <h2 class="govuk-heading-l">How to book</h2>
+
+    
+
+    {{ govukInsetText({
+
+      text: "Assessments are arranged by the DTSA (Digital Technical Service Assessment) team."
+
+    }) }}
+
+
+
+    <p class="govuk-body">The type of panel you get depends on your transaction volume:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+
+      <li><strong>over 100k transactions a year:</strong> assessed by a cross-government (GDS/CDDO) panel</li>
+
+      <li><strong>under 100k transactions a year:</strong> assessed internally by a Defra panel</li>
+
+    </ul>
+
+
+
+    <h3 class="govuk-heading-m">Lead times</h3>
+
+    <p class="govuk-body">
+
+      Internal assessors are volunteers. You must give a <strong>minimum of 6 weeks notice</strong>. We will try to book an appointment within a 2-week window of your request date.
+
+    </p>
+
+
+
+    <div class="govuk-!-padding-4 govuk-!-margin-bottom-8" style="background-color: #f3f2f1; border-left: 5px solid #005a30;">
+
+      <h3 class="govuk-heading-s">Email to book</h3>
+
+      <p class="govuk-body">
+
+        Send your request to <a href="mailto:serviceassessments@defra.gov.uk" class="govuk-link">serviceassessments@defra.gov.uk</a> with:
+
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+
+        <li>name of the service</li>
+
+        <li>type of assessment required (Alpha or Beta)</li>
+
+        <li>a short summary of what the service does</li>
+
+        <li>a 2-week period when you are ready to be assessed</li>
+
+      </ul>
+
+    </div>
+
+
+
+    <h2 class="govuk-heading-l">Assessment stages</h2>
+
+
+
+    {{ govukAccordion({
+
+      id: "assessment-stages",
+
+      showSectionText: "Show details",
+
+      hideSectionText: "Hide details",
+
+      items: [
+
+        {
+
+          heading: { text: "1. End of Discovery peer review" },
+
+          content: {
+
+            html: '<p class="govuk-body">A peer review to confirm you have understood the problem and have a plan for Alpha. You should show:</p><ul class="govuk-list govuk-list--bullet"><li>how you explored the problem space</li><li>who your users are and their needs</li><li>existing services that meet these needs</li><li>policy constraints</li></ul>'
+
+          }
+
+        },
+
+        {
+
+          heading: { text: "2. Alpha assessment" },
+
+          content: {
+
+            html: '<p class="govuk-body">Book this within a fortnight of starting Alpha. You need to show:</p><ul class="govuk-list govuk-list--bullet"><li>prototypes of different ideas you tested</li><li>evidence of user research with diverse users</li><li>technical exploration of the solution</li><li>a plan for Beta</li></ul><p class="govuk-body"><strong>Avoid:</strong> designing solutions without research, or researching preferences instead of behaviour.</p>'
+
+          }
+
+        },
+
+        {
+
+          heading: { text: "3. Beta assessment" },
+
+          content: {
+
+            html: '<p class="govuk-body">You will have an assessment before moving from Private Beta to Public Beta. You must show:</p><ul class="govuk-list govuk-list--bullet"><li>the service team has capacity to sustain iteration</li><li>support staff can cope with new users</li><li>you have an accessibility audit and statement</li><li>you are measuring success metrics defined in Alpha</li></ul>'
+
+          }
+
+        },
+
+        {
+
+          heading: { text: "4. Live assessment" },
+
+          content: {
+
+            html: '<p class="govuk-body">Spend Public Beta preparing for Live. You must show:</p><ul class="govuk-list govuk-list--bullet"><li>you have addressed constraints found in Beta</li><li>you have integrated with existing transactions</li><li>the service is sustainable and supported</li></ul>'
+
+          }
+
+        }
+
+      ]
+
+    }) }}
+
+
+
+    <h2 class="govuk-heading-l">Exemptions</h2>
+
+    <p class="govuk-body">
+
+      All central government services must be on GOV.UK unless they meet specific exemption criteria (for example, it is for internal staff only).
+
+    </p>
+
+    
+
+    <p class="govuk-body">To request an exemption:</p>
+
+    <ol class="govuk-list govuk-list--number">
+
+      <li>Check the <a href="#" class="govuk-link">GOV.UK proposition</a> to see if you qualify.</li>
+
+      <li>Email <strong>serviceassessments@defra.gov.uk</strong> with the subject "Exemption request: [Service Name]".</li>
+
+      <li>Include your proposed domain name and evidence of why user needs cannot be met on GOV.UK.</li>
+
+    </ol>
+
+
+
+    <div class="govuk-warning-text">
+
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+
+      <strong class="govuk-warning-text__text">
+
+        <span class="govuk-warning-text__assistive">Warning</span>
+
+        Do not procure an external website until your exemption request has been approved.
+
+      </strong>
+
+    </div>
+
+
+
+  </div>
+
+
+
+  {# RELATED CONTENT SIDEBAR #}
+
+  <div class="govuk-grid-column-one-third">
+
+    <div class="app-related-items" role="complementary">
+
+      <h2 class="govuk-heading-m" id="subsection-title">
+
+        Related content
+
+      </h2>
+
+      <nav role="navigation" aria-labelledby="subsection-title">
+
+        <ul class="govuk-list govuk-!-font-size-16">
+
+          <li>
+
+            <a class="govuk-link" href="/manual/service-standard">
+
+              The Service Standard (14 points)
+
+            </a>
+
+          </li>
+
+          <li>
+
+            <a class="govuk-link" href="#">
+
+              Become a service assessor
+
+            </a>
+
+          </li>
+
+          <li>
+
+            <a class="govuk-link" href="#">
+
+              Standard operating procedures for assessors
+
+            </a>
+
+          </li>
+
+           <li>
+
+            <a class="govuk-link" href="https://www.gov.uk/service-manual/service-assessments">
+
+              GDS guidance on assessments
+
+            </a>
+
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </div>
+
+
+
+</div>
+
+
+
+{% endblock %}
+

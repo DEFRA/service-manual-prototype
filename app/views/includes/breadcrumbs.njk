@@ -1,0 +1,27 @@
+{#
+  Breadcrumb navigation component following GOV.UK design patterns
+  
+  Usage in page templates:
+  {% set breadcrumbItems = [
+    { text: "Home", href: "/" },
+    { text: "Service Manual", href: "/service-manual" },
+    { text: "Current Page" }
+  ] %}
+  {% include "includes/breadcrumbs.njk" %}
+  
+  Note: The last item should NOT have an href (it's the current page)
+  
+  GOV.UK Best Practices:
+  - Always start with "Home"
+  - Show full hierarchy
+  - Current page should not be a link
+  - Match page titles and navigation labels
+  - Accessible by default (GOV.UK component handles ARIA)
+#}
+
+{% if breadcrumbItems %}
+  {{ govukBreadcrumbs({
+    items: breadcrumbItems
+  }) }}
+{% endif %}
+

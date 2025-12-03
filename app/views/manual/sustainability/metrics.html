@@ -1,0 +1,83 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Measure sustainability - Defra Service Manual
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBreadcrumbs({
+  items: [
+    { text: "Defra Service Manual", href: "/" },
+    { text: "Sustainability", href: "/manual/sustainability" },
+    { text: "Measure sustainability" }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  
+  <div class="govuk-grid-column-one-third">
+    <nav class="app-sub-navigation" aria-label="Sub navigation">
+      
+      <h3 class="app-subnav__header">In this section</h3>
+      <ul class="app-subnav__list">
+        <li class="app-subnav__item">
+          <a class="app-subnav__link" href="/manual/sustainability">
+            Deliver a sustainable service
+          </a>
+        </li>
+        <li class="app-subnav__item">
+          <a class="app-subnav__link" href="/manual/sustainability/objectives">
+            Defra's six objectives
+          </a>
+        </li>
+      </ul>
+
+      <h3 class="app-subnav__header">How to do this</h3>
+      <ul class="app-subnav__list">
+        <li class="app-subnav__item">
+          <a class="app-subnav__link" href="/manual/sustainability/process">
+            Assess risk and write statements
+          </a>
+        </li>
+        <li class="app-subnav__item">
+          <a class="app-subnav__link" href="/manual/sustainability/metrics" aria-current="page">
+            Measure sustainability
+          </a>
+        </li>
+      </ul>
+
+    </nav>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-xl">How to meet the standard</span>
+    <h1 class="govuk-heading-xl">Measure sustainability</h1>
+    
+    <p class="govuk-body-l">
+      The Sustainability Statement includes space for service teams to record what they have measured, or plan to measure, for each of the 6 objectives.
+    </p>
+
+    <p class="govuk-body">
+      We do not currently expect services to have developed a carbon metric. Many meaningful sustainability actions can be taken without measurement.
+    </p>
+
+    <p class="govuk-body">
+      For example:
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>reducing data capture and storage</li>
+      <li>turning off environments when not in use</li>
+      <li>reusing components rather than developing them from scratch</li>
+      <li>ensuring hardware is treated in as circular a manner as possible</li>
+    </ul>
+
+  </div>
+</div>
+
+{% endblock %}
+

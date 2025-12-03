@@ -1,0 +1,87 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Defra's six objectives - Defra Service Manual
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBreadcrumbs({
+  items: [
+    { text: "Defra Service Manual", href: "/" },
+    { text: "Sustainability", href: "/manual/sustainability" },
+    { text: "Defra's six objectives" }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  
+  {# LEFT HAND NAVIGATION #}
+  <div class="govuk-grid-column-one-third">
+    <nav class="app-sub-navigation" aria-label="Sub navigation">
+      
+      <h3 class="app-subnav__header">In this section</h3>
+      <ul class="app-subnav__list">
+        <li class="app-subnav__item">
+          <a class="app-subnav__link" href="/manual/sustainability">
+            Deliver a sustainable service
+          </a>
+        </li>
+        <li class="app-subnav__item">
+          {# ACTIVE #}
+          <a class="app-subnav__link" href="/manual/sustainability/objectives" aria-current="page">
+            Defra's six objectives
+          </a>
+        </li>
+      </ul>
+
+      <h3 class="app-subnav__header">How to do this</h3>
+      <ul class="app-subnav__list">
+        <li class="app-subnav__item">
+          <a class="app-subnav__link" href="/manual/sustainability/process">
+            Assess risk and write statements
+          </a>
+        </li>
+        <li class="app-subnav__item">
+          <a class="app-subnav__link" href="/manual/sustainability/metrics">
+            Measure sustainability
+          </a>
+        </li>
+      </ul>
+
+    </nav>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-xl">Digital Sustainability Strategy</span>
+    <h1 class="govuk-heading-xl">Defra's six objectives</h1>
+    
+    <p class="govuk-body-l">
+      Your sustainability statement should lay out what actions have been taken, and those that are planned, against these six objectives from <a href="https://www.gov.uk/government/publications/defra-digital-sustainability-strategy-2025-to-2030" class="govuk-link" rel="noreferrer noopener" target="_blank">Defra's Digital Sustainability Strategy<span class="govuk-visually-hidden"> (opens in new tab)</span></a>.
+    </p>
+
+    <h2 class="govuk-heading-m">1. Reduce greenhouse gas emissions</h2>
+    <p class="govuk-body">Reduce greenhouse gas emissions as far as possible to contribute towards Defra's net zero target.</p>
+
+    <h2 class="govuk-heading-m">2. Reduce wider planetary impacts</h2>
+    <p class="govuk-body">Reduce wider planetary impacts such as water consumption, land use change and biodiversity impacts.</p>
+
+    <h2 class="govuk-heading-m">3. Put circular practices into action</h2>
+    <p class="govuk-body">For example through extending the lifespan of existing equipment or purchasing remanufactured or refurbished hardware.</p>
+
+    <h2 class="govuk-heading-m">4. Reduce social risk</h2>
+    <p class="govuk-body">Reduce social risk from supply chains that are high risk for social inequality or exploitation.</p>
+
+    <h2 class="govuk-heading-m">5. Increase supply chain transparency</h2>
+    <p class="govuk-body">Work to increase supply chain transparency.</p>
+
+    <h2 class="govuk-heading-m">6. Improve resilience to climate risk</h2>
+    <p class="govuk-body">Take an approach to infrastructure and hosting that seeks to ensure that services are as resilient as possible to the risks of climate change (for example, flooding or extreme heat).</p>
+
+  </div>
+</div>
+
+{% endblock %}

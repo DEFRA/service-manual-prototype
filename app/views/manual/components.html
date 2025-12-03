@@ -3,6 +3,26 @@
 {% set pageName="Components" %}
 {% set currentPage = "components" %}
 
+{% block beforeContent %}
+
+{% set breadcrumbItems = [
+  {
+    text: "Home",
+    href: "/"
+  },
+  {
+    text: "Service Manual",
+    href: "/service-manual"
+  },
+  {
+    text: "Components"
+  }
+] %}
+
+{% include "includes/breadcrumbs.njk" %}
+
+{% endblock %}
+
 {% block content %}
 
 <div class="govuk-grid-row">

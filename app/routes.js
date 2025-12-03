@@ -8,7 +8,7 @@ const router = govukPrototypeKit.requests.setupRouter()
 
 // Manual routes
 router.get('/', function (req, res) {
-  res.render('index')
+  res.render('service-manual-home')
 })
 
 router.get('/service-standard', function (req, res) {
@@ -33,4 +33,26 @@ router.get('/working-with-defra', function (req, res) {
 
 router.get('/service-manual', function (req, res) {
   res.render('service-manual-home')
+})
+
+// Sustainability Topic Routes
+router.get('/manual/sustainability', function (req, res) {
+  res.render('manual/sustainability/index')
+})
+
+router.get('/manual/sustainability/objectives', function (req, res) {
+  res.render('manual/sustainability/objectives')
+})
+
+router.get('/manual/sustainability/process', function (req, res) {
+  res.render('manual/sustainability/process')
+})
+
+router.get('/manual/sustainability/metrics', function (req, res) {
+  res.render('manual/sustainability/metrics')
+})
+
+// Existing page keeping older naming for now
+router.get('/manual/sustainability/principles', function (req, res) {
+  res.render('manual/sustainability/principles')
 })

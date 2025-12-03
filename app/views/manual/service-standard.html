@@ -8,29 +8,21 @@
 
 {% block beforeContent %}
 
-{{ govukBreadcrumbs({
+{% set breadcrumbItems = [
+  {
+    text: "Home",
+    href: "/"
+  },
+  {
+    text: "Service Manual",
+    href: "/service-manual"
+  },
+  {
+    text: "Service standard"
+  }
+] %}
 
-  items: [
-
-    {
-
-      text: "Home",
-
-      href: "/"
-
-    },
-
-    {
-
-      text: "Service standard",
-
-      href: "/service-standard"
-
-    }
-
-  ]
-
-}) }}
+{% include "includes/breadcrumbs.njk" %}
 
 {% endblock %}
 

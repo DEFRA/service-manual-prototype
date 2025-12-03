@@ -1,0 +1,120 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Point 15: Deliver a sustainable service - Defra Service Manual
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBreadcrumbs({
+  items: [
+    { text: "Defra Service Manual", href: "/" },
+    { text: "Sustainability" }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  
+  {# LEFT HAND NAVIGATION #}
+  <div class="govuk-grid-column-one-third">
+    <nav class="app-sub-navigation" aria-label="Sub navigation">
+      
+      <h3 class="app-subnav__header">In this section</h3>
+      <ul class="app-subnav__list">
+        <li class="app-subnav__item">
+          <a class="app-subnav__link" href="/manual/sustainability" aria-current="page">
+            Deliver a sustainable service
+          </a>
+        </li>
+        <li class="app-subnav__item">
+          <a class="app-subnav__link" href="/manual/sustainability/objectives">
+            Defra's six objectives
+          </a>
+        </li>
+      </ul>
+
+      <h3 class="app-subnav__header">How to do this</h3>
+      <ul class="app-subnav__list">
+        <li class="app-subnav__item">
+          <a class="app-subnav__link" href="/manual/sustainability/process">
+            Assess risk and write statements
+          </a>
+        </li>
+        <li class="app-subnav__item">
+          <a class="app-subnav__link" href="/manual/sustainability/metrics">
+            Measure sustainability
+          </a>
+        </li>
+      </ul>
+
+    </nav>
+  </div>
+
+  {# MAIN CONTENT #}
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-xl">Service Standard</span>
+    <h1 class="govuk-heading-xl">15. Deliver a sustainable service</h1>
+
+    <p class="govuk-body-l">
+      Understand any social and environmental risks created by your service and take steps to reduce these as far as possible.
+    </p>
+
+    <p class="govuk-body">
+      Defra adheres to the cross-government <a href="https://www.gov.uk/service-manual/service-standard" class="govuk-link" rel="noreferrer noopener" target="_blank">GOV.UK Service Standard<span class="govuk-visually-hidden"> (opens in new tab)</span></a>. All services must meet the standard's 14 points.
+    </p>
+
+    <p class="govuk-body">
+      Because of Defra's role in protecting the environment, services must also meet this 15th point about sustainability.
+    </p>
+
+    <h2 class="govuk-heading-l">Why it's important</h2>
+    <p class="govuk-body">
+      Defra's services aim to bring tangible environmental benefits to our society – from improving water quality to boosting the nation's resilience to flooding. Benefits can also come from replacing existing processes that are relatively resource intensive with more lightweight and modern equivalents.
+    </p>
+    <p class="govuk-body">
+      However, the use of technology for government services also contributes to climate change and other sustainability risks.
+    </p>
+    
+    <ul class="govuk-list govuk-list--bullet">
+      <li><strong>Energy use</strong> contributes to warming greenhouse gases.</li>
+      <li><strong>Hardware manufacturing</strong> (mining and processing) can lead to water scarcity, resource depletion, and biodiversity loss.</li>
+      <li><strong>Supply chains</strong> can have unintended social impacts, such as labour exploitation.</li>
+    </ul>
+
+    {{ govukInsetText({
+      html: "The Greening Government Commitments and <a href='https://www.gov.uk/government/publications/defra-digital-sustainability-strategy-2025-to-2030' class='govuk-link' rel='noreferrer noopener' target='_blank'>Defra's Digital Sustainability Strategy<span class='govuk-visually-hidden'> (opens in new tab)</span></a> set objectives to reduce the impacts of the use of digital technology."
+    }) }}
+
+    <h2 class="govuk-heading-l">What it means</h2>
+    <p class="govuk-body">
+      Service teams should design, develop, and operate their services to be as sustainable as possible, and set out their approach in a <strong>sustainability statement</strong>.
+    </p>
+    <p class="govuk-body">
+      The statement should lay out what actions have been taken, and those that are planned, against the <a href="/manual/sustainability/objectives" class="govuk-link">6 objectives</a> of <a href="https://www.gov.uk/government/publications/defra-digital-sustainability-strategy-2025-to-2030" class="govuk-link" rel="noreferrer noopener" target="_blank">Defra's Digital Sustainability Strategy<span class="govuk-visually-hidden"> (opens in new tab)</span></a>.
+    </p>
+
+    <h3 class="govuk-heading-m">Detailed guidance</h3>
+    <p class="govuk-body">
+      More detailed guidance on reducing the impacts of services through their lifecycle can be found in the <a href="https://greenerservices.github.io/" class="govuk-link" rel="noreferrer noopener" target="_blank">Greener Service Principles<span class="govuk-visually-hidden"> (opens in new tab)</span></a>.
+    </p>
+    <p class="govuk-body">
+      Guidance on artificial intelligence can be found in <a href="https://defra.sharepoint.com/:w:/t/Team740/ESn6XK_adQRJurJYDXe_c6YBfU63gFpOVGQiaNoCvQgV8A?e=Bi9U2s" class="govuk-link" rel="noreferrer noopener" target="_blank">Defra's AI sustainability guidance<span class="govuk-visually-hidden"> (opens in new tab)</span></a>.
+    </p>
+
+    <div class="govuk-!-margin-top-8 govuk-!-padding-4" style="background-color: #f3f2f1; border-left: 5px solid #005a30;">
+      <h3 class="govuk-heading-m">Get support</h3>
+      <p class="govuk-body">
+        The <strong>Sustainable IT Team</strong> can help you understand these risks and draft your statement.
+      </p>
+      <ul class="govuk-list">
+        <li>Email: <a href="mailto:sustainable-it@defra.gov.uk" class="govuk-link">sustainable-it@defra.gov.uk</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

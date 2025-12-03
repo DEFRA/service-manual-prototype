@@ -3,6 +3,26 @@
 {% set pageName="Working with Defra" %}
 {% set currentPage = "working-with-defra" %}
 
+{% block beforeContent %}
+
+{% set breadcrumbItems = [
+  {
+    text: "Home",
+    href: "/"
+  },
+  {
+    text: "Service Manual",
+    href: "/service-manual"
+  },
+  {
+    text: "Working with Defra"
+  }
+] %}
+
+{% include "includes/breadcrumbs.njk" %}
+
+{% endblock %}
+
 {% block content %}
 
 <div class="govuk-grid-row">
