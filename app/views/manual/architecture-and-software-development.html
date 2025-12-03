@@ -1,0 +1,201 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Architecture and
+software development - Defra Service Manual {% endblock %} {% set
+pageName="Architecture and software development" %} {% set currentPage =
+"architecture-and-software-development" %} {% block beforeContent %} {{
+govukBreadcrumbs({ items: [ { text: "Home", href: "/" }, { text: "Architecture
+and software development", href: "/architecture-and-software-development" } ] })
+}} {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">Your role at Defra</span>
+    <h1 class="govuk-heading-xl">Architecture and software development</h1>
+
+    <p class="govuk-body-l">
+      Guidance on designing and building digital services at Defra.
+    </p>
+
+    <!-- <nav class="gem-c-contents-list" aria-label="Contents" role="navigation">
+      <h2 class="gem-c-contents-list__title">Contents</h2>
+      <ol class="gem-c-contents-list__list">
+        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+          <a class="gem-c-contents-list__link govuk-link" href="#software-development-standards">Software development standards</a>
+        </li>
+        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+          <a class="gem-c-contents-list__link govuk-link" href="#delivery-architecture">Delivery architecture</a>
+        </li>
+        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+          <a class="gem-c-contents-list__link govuk-link" href="#technology-guardrails-service">Technology guardrails service</a>
+        </li>
+        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+          <a class="gem-c-contents-list__link govuk-link" href="#core-delivery-platform">Core Delivery Platform</a>
+        </li>
+        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+          <a class="gem-c-contents-list__link govuk-link" href="#the-tools-radar">The Tools Radar</a>
+        </li>
+      </ol>
+    </nav> -->
+
+    <hr
+      class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
+    />
+
+    <h2 class="govuk-heading-l" id="software-development-standards">
+      Software development standards
+    </h2>
+
+    <p class="govuk-body">
+      Standards and guidance that apply to all software development undertaken
+      on behalf of the Defra group, whether by staff, contingent workers or
+      suppliers. All developers working on behalf of Defra need to be aware of
+      their obligation to follow these standards.
+    </p>
+
+    <h3 class="govuk-heading-s">When to use</h3>
+    <p class="govuk-body">
+      Use throughout the development lifecycle. Any deviation must be managed as
+      an exception under Defra's architectural governance processes.
+    </p>
+
+    <p class="govuk-body">
+      <a
+        href="https://defra.github.io/software-development-standards/"
+        class="govuk-link"
+        rel="noreferrer noopener"
+        target="_blank"
+        >View the software development standards (opens in new tab)</a
+      >
+    </p>
+
+    <hr
+      class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
+    />
+
+    <h2 class="govuk-heading-l" id="delivery-architecture">
+      Delivery architecture
+    </h2>
+
+    <p class="govuk-body">
+      The Delivery Architecture team ensures the successful and effective
+      delivery of complex solutions within Defra Group. The team focuses on
+      designing, planning, and overseeing the technical aspects of project
+      delivery, aiming to create technology solutions that deliver business
+      goals and requirements effectively, efficiently and sustainably.
+    </p>
+
+    <h3 class="govuk-heading-s">When to use</h3>
+    <p class="govuk-body">
+      Use when planning and delivering complex technical solutions within Defra
+      Group.
+    </p>
+
+    <p class="govuk-body">
+      <a
+        href="https://defra.sharepoint.com/teams/Team3221/SitePages/Nav-Delivery-Architecture.aspx"
+        class="govuk-link"
+        rel="noreferrer noopener"
+        target="_blank"
+        >View the Delivery Architecture SharePoint site (opens in new tab)</a
+      >
+    </p>
+
+    <hr
+      class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
+    />
+
+    <h2 class="govuk-heading-l" id="technology-guardrails-service">
+      Technology guardrails service
+    </h2>
+
+    <p class="govuk-body">
+      Strategic Architecture are responsible for managing, maintaining and
+      working with others to develop and design guardrails to support
+      consistent, cost-effective, sustainable and efficient delivery
+    </p>
+
+    <h3 class="govuk-heading-s">When to use</h3>
+    <p class="govuk-body">
+      Use when planning and delivering complex technical solutions within Defra
+      Group.
+    </p>
+
+    <p class="govuk-body">
+      <a
+        href="https://defra.sharepoint.com/teams/Team3221/SitePages/Technology-Guardrails-Service.aspx "
+        class="govuk-link"
+        rel="noreferrer noopener"
+        target="_blank"
+        >View the Technology Guardrails Service SharePoint site (opens in new
+        tab)</a
+      >
+    </p>
+
+    <hr
+      class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
+    />
+
+    <h2 class="govuk-heading-l" id="core-delivery-platform">
+      Core Delivery Platform
+    </h2>
+
+    <p class="govuk-body">
+      Enables teams to create, deploy, run and monitor services at DEFRA.
+    </p>
+
+    <h3 class="govuk-heading-s">When to use</h3>
+    <p class="govuk-body">
+      Use the documentation and guidance on the Core Delivery Platform portal
+      when designing your service. Use the portal to create, deploy, test and
+      monitor your microservices.
+    </p>
+
+    <p class="govuk-body">
+      <a
+        href="https://portal.cdp-int.defra.cloud/"
+        class="govuk-link"
+        rel="noreferrer noopener"
+        target="_blank"
+        >View the Core Delivery Platform portal (opens in new tab)</a
+      >
+    </p>
+
+    <hr
+      class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
+    />
+
+    <h2 class="govuk-heading-l" id="the-tools-radar">The Tools Radar</h2>
+
+    <p class="govuk-body">
+      The Tools Radar is a tool that helps teams to choose technology for their
+      service. It is a list of tools that are available to use at Defra.
+    </p>
+
+    <h3 class="govuk-heading-s">When to use</h3>
+    <p class="govuk-body">
+      Use when choosing a technology that is not recommended by the Core
+      Delivery Platform or Software Development Standards.
+    </p>
+
+    <p class="govuk-body">
+      <a
+        href="https://eaflood.atlassian.net/jira/software/projects/TR/boards/630"
+        class="govuk-link"
+        rel="noreferrer noopener"
+        target="_blank"
+        >View the Tools Radar Jira board (opens in new tab)</a
+      >
+    </p>
+
+    <hr
+      class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
+    />
+    <h2 class="govuk-heading-m">Get help</h2>
+
+    <p class="govuk-body">
+      If you need help designing or building your service, contact the
+      <a href="#" class="govuk-link">Delivery Architecture team</a>.
+    </p>
+  </div>
+</div>
+
+{% endblock %}
