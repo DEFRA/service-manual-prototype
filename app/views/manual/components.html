@@ -1,24 +1,18 @@
-{% extends "layouts/main.html" %}
-
-{% set pageName="Components" %}
-{% set currentPage = "components" %}
-
-{% block content %}
+{% extends "layouts/main.html" %} {% set pageName="Components" %} {% set
+currentPage = "components" %} {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-quarter">
     {% include "manual/_navigation.html" %}
   </div>
   <div class="govuk-grid-column-three-quarters">
-    <h1 class="govuk-heading-xl">
-      Components
-    </h1>
-    
+    <h1 class="govuk-heading-xl">Components</h1>
+
     <p class="govuk-body">
-      Reusable components and patterns from the GOV.UK Design System, with guidance on how to use them in Defra services.
+      Reusable components and patterns from the GOV.UK Design System, with
+      guidance on how to use them in Defra services.
     </p>
   </div>
 </div>
 
 {% endblock %}
-

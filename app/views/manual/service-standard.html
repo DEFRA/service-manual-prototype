@@ -1,315 +1,317 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/main.html" %} {% block pageTitle %} Meeting the Service
+Standard at Defra - Defra Service Manual {% endblock %} {% block beforeContent
+%} {{ govukBreadcrumbs({ items: [ { text: "Home", href: "/" }, { text: "Service
+standard", href: "/service-standard" } ] }) }} {% endblock %} {% block content
+%} {# Define content for Point 15 separately to ensure robustness #} {% set
+sustainabilityContent %}
 
-{% block pageTitle %}
-
-  Meeting the Service Standard at Defra - Defra Service Manual
-
-{% endblock %}
-
-{% block beforeContent %}
-
-{{ govukBreadcrumbs({
-
-  items: [
-
-    {
-
-      text: "Home",
-
-      href: "/"
-
-    },
-
-    {
-
-      text: "Service standard",
-
-      href: "/service-standard"
-
-    }
-
-  ]
-
-}) }}
-
-{% endblock %}
-
-{% block content %}
-
-{# Define content for Point 15 separately to ensure robustness #}
-
-{% set sustainabilityContent %}
-
-<p class="govuk-body">Services must support Defra's sustainability and Net Zero goals.</p>
+<p class="govuk-body">
+  Services must support Defra's sustainability and Net Zero goals.
+</p>
 
 <h3 class="govuk-heading-s">Defra Standard</h3>
 
 <ul class="govuk-list govuk-list--bullet">
+  <li>
+    <strong>Hosting efficiency:</strong> You must demonstrate that you are
+    resizing servers to match demand, for example by scaling down at night to
+    reduce energy consumption.
+  </li>
 
-  <li><strong>Hosting efficiency:</strong> You must demonstrate that you are resizing servers to match demand, for example by scaling down at night to reduce energy consumption.</li>
+  <li>
+    <strong>Data retention:</strong> Do not store duplicate data unnecessarily.
+    You must have a clear deletion policy to reduce your storage carbon
+    footprint.
+  </li>
 
-  <li><strong>Data retention:</strong> Do not store duplicate data unnecessarily. You must have a clear deletion policy to reduce your storage carbon footprint.</li>
-
-  <li><strong>Hardware:</strong> Designs should work quickly on older hardware to prevent premature electronic waste (e-waste).</li>
-
+  <li>
+    <strong>Hardware:</strong> Designs should work quickly on older hardware to
+    prevent premature electronic waste (e-waste).
+  </li>
 </ul>
 
-<p class="govuk-body"><a href="#" class="govuk-link">Read the Defra Digital Sustainability Strategy 2025 to 2030</a></p>
+<p class="govuk-body">
+  <a href="#" class="govuk-link"
+    >Read the Defra Digital Sustainability Strategy 2025 to 2030</a
+  >
+</p>
 
 {% endset %}
 
 <div class="govuk-grid-row">
-
   <div class="govuk-grid-column-two-thirds">
-
-
-
     <span class="govuk-caption-xl">Standards and assurance</span>
 
     <h1 class="govuk-heading-xl">Meeting the Service Standard at Defra</h1>
 
-
-
     <p class="govuk-body-l">
+      All public facing transaction services must meet the
 
-      All public facing transaction services must meet the 
-
-      <a href="https://www.gov.uk/service-manual/service-standard" class="govuk-link" rel="noreferrer noopener" target="_blank">Government Service Standard (opens in new tab)</a>.
-
+      <a
+        href="https://www.gov.uk/service-manual/service-standard"
+        class="govuk-link"
+        rel="noreferrer noopener"
+        target="_blank"
+        >Government Service Standard (opens in new tab)</a
+      >.
     </p>
-
-
 
     <p class="govuk-body">
-
-      At Defra, we apply this standard to ensure our services work for users in rural environments, comply with environmental regulations, and integrate with our scientific data platforms.
-
+      At Defra, we apply this standard to ensure our services work for users in
+      rural environments, comply with environmental regulations, and integrate
+      with our scientific data platforms.
     </p>
 
-
-
-    {{ govukInsetText({
-
-      text: "This guidance applies to all Defra group bodies, including the Environment Agency (EA), Animal and Plant Health Agency (APHA), and the Rural Payments Agency (RPA)."
-
-    }) }}
-
-
+    {{ govukInsetText({ text: "This guidance applies to all Defra group bodies,
+    including the Environment Agency (EA), Animal and Plant Health Agency
+    (APHA), and the Rural Payments Agency (RPA)." }) }}
 
     <h2 class="govuk-heading-l">The 15 Points: Defra Context</h2>
 
-
-
-    {{ govukAccordion({
-
-      id: "service-standard-accordion",
-
-      showSectionText: "Show guidance",
-
-      hideSectionText: "Hide guidance",
-
-      items: [
-
-        {
-
-          heading: { text: "1. Understand users and their needs" },
-
-          content: {
-
-            html: '<p class="govuk-body">You must engage with actual users, including those in rural areas with poor connectivity.</p><h3 class="govuk-heading-s">What this means for Defra</h3><ul class="govuk-list govuk-list--bullet"><li><strong>Field contexts:</strong> Consider users working in difficult physical environments, such as vets in abattoirs or farmers in tractors.</li><li><strong>Seasonality:</strong> User availability changes drastically during lambing, harvest, or flood season.</li></ul>'
-
-          }
-
-        },
-
-        {
-
-          heading: { text: "2. Solve a whole problem for users" },
-
-          content: {
-
-            html: '<p class="govuk-body">Services should not be isolated by policy team. Users care about their outcome, for example "exporting fish", not the internal department structure.</p><h3 class="govuk-heading-s">Defra specifics</h3><ul class="govuk-list govuk-list--bullet"><li><strong>Cross-border trade:</strong> Consider interactions with Border Force and HMRC systems.</li><li><strong>Devolved administrations:</strong> Environmental policy differs in Wales and Scotland. Your service must handle these differences gracefully.</li></ul>'
-
-          }
-
-        },
-
-        {
-
-          heading: { text: "3. Provide a joined-up experience across all channels" },
-
-          content: {
-
-            html: '<p class="govuk-body">Service design is not just digital. It includes phone support, paper forms, and face-to-face inspections.</p><h3 class="govuk-heading-s">Defra specifics</h3><ul class="govuk-list govuk-list--bullet"><li><strong>Inspections:</strong> How does your digital service trigger a physical inspection? How is the result fed back to the user?</li><li><strong>Paper backups:</strong> In the event of a system failure during a critical incident, such as a Bird Flu outbreak, is there a paper fallback?</li></ul>'
-
-          }
-
-        },
-
-        {
-
-          heading: { text: "4. Make the service simple to use" },
-
-          content: {
-
-            html: '<p class="govuk-body">Complexity is often hidden in the policy. Challenge complex rules before designing complex screens.</p><h3 class="govuk-heading-s">Defra specifics</h3><ul class="govuk-list govuk-list--bullet"><li><strong>Scientific language:</strong> Translate terms like "hydrological catchment" or "bovine spongiform encephalopathy" into plain English where possible.</li><li><strong>Mapping:</strong> Drawing a land parcel on a map is a complex interaction. Use established patterns to make this simple.</li></ul>'
-
-          }
-
-        },
-
-        {
-
-          heading: { text: "5. Make sure everyone can use the service" },
-
-          content: {
-
-            html: '<p class="govuk-body">You must meet WCAG 2.2 AA standards.</p><h3 class="govuk-heading-s">Defra specifics</h3><ul class="govuk-list govuk-list--bullet"><li><strong>Legacy hardware:</strong> Users may be accessing systems on older farm computers or legacy operating systems.</li><li><strong>Map accessibility:</strong> Ensure your mapping components work for users who use screen readers or voice control software.</li></ul>'
-
-          }
-
-        },
-
-        {
-
-          heading: { text: "6. Have a multidisciplinary team" },
-
-          content: {
-
-            html: '<p class="govuk-body">Your team must contain the appropriate roles and have the right mix of skills.</p><h3 class="govuk-heading-s">Defra specifics</h3><ul class="govuk-list govuk-list--bullet"><li><strong>Policy integration:</strong> Defra services are often policy-heavy. Include a Policy Lead embedded in your team to make rapid decisions.</li><li><strong>Scientific expertise:</strong> If your service models environmental data, you may need a Data Scientist or Epidemiologist on the team.</li></ul>'
-
-          }
-
-        },
-
-        {
-
-          heading: { text: "7. Use agile ways of working" },
-
-          content: {
-
-            html: '<p class="govuk-body">You should release software frequently and use data to make decisions.</p><h3 class="govuk-heading-s">Defra specifics</h3><ul class="govuk-list govuk-list--bullet"><li><strong>Fixed deadlines:</strong> Defra often works to fixed policy dates (such as "Exit Day" or "Grant Scheme Launch"). Use agile methods to flex the scope, not the quality, to meet these dates.</li><li><strong>Emergency response:</strong> During incidents, teams may need to deploy daily changes. Your governance must support rapid approval.</li></ul>'
-
-          }
-
-        },
-
-        {
-
-          heading: { text: "8. Iterate and improve frequently" },
-
-          content: {
-
-            html: '<p class="govuk-body">The service is not finished when it goes live.</p><h3 class="govuk-heading-s">Defra specifics</h3><ul class="govuk-list govuk-list--bullet"><li><strong>Feedback loops:</strong> Establish direct channels with field inspectors and customer service centres to gather feedback on how the service performs in the real world.</li><li><strong>Policy changes:</strong> Environmental regulations change frequently. Your service architecture must be flexible enough to adapt to new quota limits or disease zones.</li></ul>'
-
-          }
-
-        },
-
-        {
-
-          heading: { text: "9. Create a secure service which protects users' privacy" },
-
-          content: {
-
-            html: '<p class="govuk-body">You must involve security architects from the start of your Discovery phase.</p><h3 class="govuk-heading-s">Essential Defra Standards</h3><ul class="govuk-list govuk-list--bullet"><li><strong>Data handling:</strong> You must classify data as Official or Secret according to the Defra Security Policy Framework.</li><li><strong>Critical National Infrastructure (CNI):</strong> If your service affects infrastructure such as flood defences or water supply, higher assurance levels apply.</li><li><strong>Farm Data:</strong> Farmers consider their yield and land data commercially sensitive. Handle it with the same care as personal data.</li></ul>'
-
-          }
-
-        },
-
-        {
-
-          heading: { text: "10. Define what success looks like and publish performance data" },
-
-          content: {
-
-            html: '<p class="govuk-body">You must publish data on the four mandatory key performance indicators (KPIs).</p><h3 class="govuk-heading-s">Defra specifics</h3><ul class="govuk-list govuk-list--bullet"><li><strong>Environmental outcomes:</strong> Measure the real-world impact, for example "reduction in flood damage" or "increase in biodiversity", alongside digital metrics.</li><li><strong>Uptake:</strong> In voluntary schemes, measure the demographics of uptake to ensure you are not excluding smaller farms or businesses.</li></ul>'
-
-          }
-
-        },
-
-        {
-
-          heading: { text: "11. Choose the right tools and technology" },
-
-          content: {
-
-            html: '<p class="govuk-body">Use common platforms where possible. Do not build custom hosting unless the Technical Design Authority (TDA) approves it.</p><h3 class="govuk-heading-s">The Defra Stack</h3><ul class="govuk-list govuk-list--bullet"><li><strong>Hosting:</strong> Use the Core Development Platform (CDP).</li><li><strong>Case Management:</strong> Consider Defra Dynamics 365 before building custom casework software.</li><li><strong>Code:</strong> Hosted on the Defra GitHub Organisation.</li></ul>'
-
-          }
-
-        },
-
-        {
-
-          heading: { text: "12. Make new source code open" },
-
-          content: {
-
-            html: '<p class="govuk-body">Code should be open by default.</p><h3 class="govuk-heading-s">Defra Context</h3><ul class="govuk-list govuk-list--bullet"><li><strong>Exemptions:</strong> Code containing specific algorithms for biological disease modelling or CNI asset locations may be exempt for national security reasons.</li><li><strong>Re-use:</strong> Before writing code, check if another Defra agency has already solved this problem (such as an address lookup or map controller).</li></ul>'
-
-          }
-
-        },
-
-        {
-
-          heading: { text: "13. Use and contribute to open standards, common components and patterns" },
-
-          content: {
-
-            html: '<p class="govuk-body">Use the GOV.UK Design System first. If that does not meet your user needs, look at the <a href="#" class="govuk-link">Defra Design System</a>.</p>'
-
-          }
-
-        },
-
-        {
-
-          heading: { text: "14. Operate a reliable service" },
-
-          content: {
-
-            html: '<p class="govuk-body">Services must be supported during their entire life.</p><h3 class="govuk-heading-s">Defra specifics</h3><ul class="govuk-list govuk-list--bullet"><li><strong>Incident Management:</strong> Your service support model must scale during major incidents, such as widespread flooding.</li><li><strong>Out of hours:</strong> Critical services, for example flood warnings or disease reporting, require 24/7 support coverage.</li></ul>'
-
-          }
-
-        },
-
-        {
-
-          heading: { text: "15. Minimise environmental impact (Sustainability)" },
-
-          content: {
-
-            html: sustainabilityContent
-
-          }
-
-        }
-
-      ]
-
-    }) }}
-
-
+    {{ govukAccordion({ id: "service-standard-accordion", showSectionText: "Show
+    guidance", hideSectionText: "Hide guidance", items: [ { heading: { text: "1.
+    Understand users and their needs" }, content: { html: '
+    <p class="govuk-body">
+      You must engage with actual users, including those in rural areas with
+      poor connectivity.
+    </p>
+    <h3 class="govuk-heading-s">What this means for Defra</h3>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <strong>Field contexts:</strong> Consider users working in difficult
+        physical environments, such as vets in abattoirs or farmers in tractors.
+      </li>
+      <li>
+        <strong>Seasonality:</strong> User availability changes drastically
+        during lambing, harvest, or flood season.
+      </li>
+    </ul>
+    ' } }, { heading: { text: "2. Solve a whole problem for users" }, content: {
+    html: '
+    <p class="govuk-body">
+      Services should not be isolated by policy team. Users care about their
+      outcome, for example "exporting fish", not the internal department
+      structure.
+    </p>
+    <h3 class="govuk-heading-s">Defra specifics</h3>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <strong>Cross-border trade:</strong> Consider interactions with Border
+        Force and HMRC systems.
+      </li>
+      <li>
+        <strong>Devolved administrations:</strong> Environmental policy differs
+        in Wales and Scotland. Your service must handle these differences
+        gracefully.
+      </li>
+    </ul>
+    ' } }, { heading: { text: "3. Provide a joined-up experience across all
+    channels" }, content: { html: '
+    <p class="govuk-body">
+      Service design is not just digital. It includes phone support, paper
+      forms, and face-to-face inspections.
+    </p>
+    <h3 class="govuk-heading-s">Defra specifics</h3>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <strong>Inspections:</strong> How does your digital service trigger a
+        physical inspection? How is the result fed back to the user?
+      </li>
+      <li>
+        <strong>Paper backups:</strong> In the event of a system failure during
+        a critical incident, such as a Bird Flu outbreak, is there a paper
+        fallback?
+      </li>
+    </ul>
+    ' } }, { heading: { text: "4. Make the service simple to use" }, content: {
+    html: '
+    <p class="govuk-body">
+      Complexity is often hidden in the policy. Challenge complex rules before
+      designing complex screens.
+    </p>
+    <h3 class="govuk-heading-s">Defra specifics</h3>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <strong>Scientific language:</strong> Translate terms like "hydrological
+        catchment" or "bovine spongiform encephalopathy" into plain English
+        where possible.
+      </li>
+      <li>
+        <strong>Mapping:</strong> Drawing a land parcel on a map is a complex
+        interaction. Use established patterns to make this simple.
+      </li>
+    </ul>
+    ' } }, { heading: { text: "5. Make sure everyone can use the service" },
+    content: { html: '
+    <p class="govuk-body">You must meet WCAG 2.2 AA standards.</p>
+    <h3 class="govuk-heading-s">Defra specifics</h3>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <strong>Legacy hardware:</strong> Users may be accessing systems on
+        older farm computers or legacy operating systems.
+      </li>
+      <li>
+        <strong>Map accessibility:</strong> Ensure your mapping components work
+        for users who use screen readers or voice control software.
+      </li>
+    </ul>
+    ' } }, { heading: { text: "6. Have a multidisciplinary team" }, content: {
+    html: '
+    <p class="govuk-body">
+      Your team must contain the appropriate roles and have the right mix of
+      skills.
+    </p>
+    <h3 class="govuk-heading-s">Defra specifics</h3>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <strong>Policy integration:</strong> Defra services are often
+        policy-heavy. Include a Policy Lead embedded in your team to make rapid
+        decisions.
+      </li>
+      <li>
+        <strong>Scientific expertise:</strong> If your service models
+        environmental data, you may need a Data Scientist or Epidemiologist on
+        the team.
+      </li>
+    </ul>
+    ' } }, { heading: { text: "7. Use agile ways of working" }, content: { html:
+    '
+    <p class="govuk-body">
+      You should release software frequently and use data to make decisions.
+    </p>
+    <h3 class="govuk-heading-s">Defra specifics</h3>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <strong>Fixed deadlines:</strong> Defra often works to fixed policy
+        dates (such as "Exit Day" or "Grant Scheme Launch"). Use agile methods
+        to flex the scope, not the quality, to meet these dates.
+      </li>
+      <li>
+        <strong>Emergency response:</strong> During incidents, teams may need to
+        deploy daily changes. Your governance must support rapid approval.
+      </li>
+    </ul>
+    ' } }, { heading: { text: "8. Iterate and improve frequently" }, content: {
+    html: '
+    <p class="govuk-body">The service is not finished when it goes live.</p>
+    <h3 class="govuk-heading-s">Defra specifics</h3>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <strong>Feedback loops:</strong> Establish direct channels with field
+        inspectors and customer service centres to gather feedback on how the
+        service performs in the real world.
+      </li>
+      <li>
+        <strong>Policy changes:</strong> Environmental regulations change
+        frequently. Your service architecture must be flexible enough to adapt
+        to new quota limits or disease zones.
+      </li>
+    </ul>
+    ' } }, { heading: { text: "9. Create a secure service which protects users'
+    privacy" }, content: { html: '
+    <p class="govuk-body">
+      You must involve security architects from the start of your Discovery
+      phase.
+    </p>
+    <h3 class="govuk-heading-s">Essential Defra Standards</h3>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <strong>Data handling:</strong> You must classify data as Official or
+        Secret according to the Defra Security Policy Framework.
+      </li>
+      <li>
+        <strong>Critical National Infrastructure (CNI):</strong> If your service
+        affects infrastructure such as flood defences or water supply, higher
+        assurance levels apply.
+      </li>
+      <li>
+        <strong>Farm Data:</strong> Farmers consider their yield and land data
+        commercially sensitive. Handle it with the same care as personal data.
+      </li>
+    </ul>
+    ' } }, { heading: { text: "10. Define what success looks like and publish
+    performance data" }, content: { html: '
+    <p class="govuk-body">
+      You must publish data on the four mandatory key performance indicators
+      (KPIs).
+    </p>
+    <h3 class="govuk-heading-s">Defra specifics</h3>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <strong>Environmental outcomes:</strong> Measure the real-world impact,
+        for example "reduction in flood damage" or "increase in biodiversity",
+        alongside digital metrics.
+      </li>
+      <li>
+        <strong>Uptake:</strong> In voluntary schemes, measure the demographics
+        of uptake to ensure you are not excluding smaller farms or businesses.
+      </li>
+    </ul>
+    ' } }, { heading: { text: "11. Choose the right tools and technology" },
+    content: { html: '
+    <p class="govuk-body">
+      Use common platforms where possible. Do not build custom hosting unless
+      the Technical Design Authority (TDA) approves it.
+    </p>
+    <h3 class="govuk-heading-s">The Defra Stack</h3>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <strong>Hosting:</strong> Use the Core Development Platform (CDP).
+      </li>
+      <li>
+        <strong>Case Management:</strong> Consider Defra Dynamics 365 before
+        building custom casework software.
+      </li>
+      <li><strong>Code:</strong> Hosted on the Defra GitHub Organisation.</li>
+    </ul>
+    ' } }, { heading: { text: "12. Make new source code open" }, content: {
+    html: '
+    <p class="govuk-body">Code should be open by default.</p>
+    <h3 class="govuk-heading-s">Defra Context</h3>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <strong>Exemptions:</strong> Code containing specific algorithms for
+        biological disease modelling or CNI asset locations may be exempt for
+        national security reasons.
+      </li>
+      <li>
+        <strong>Re-use:</strong> Before writing code, check if another Defra
+        agency has already solved this problem (such as an address lookup or map
+        controller).
+      </li>
+    </ul>
+    ' } }, { heading: { text: "13. Use and contribute to open standards, common
+    components and patterns" }, content: { html: '
+    <p class="govuk-body">
+      Use the GOV.UK Design System first. If that does not meet your user needs,
+      look at the <a href="#" class="govuk-link">Defra Design System</a>.
+    </p>
+    ' } }, { heading: { text: "14. Operate a reliable service" }, content: {
+    html: '
+    <p class="govuk-body">
+      Services must be supported during their entire life.
+    </p>
+    <h3 class="govuk-heading-s">Defra specifics</h3>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <strong>Incident Management:</strong> Your service support model must
+        scale during major incidents, such as widespread flooding.
+      </li>
+      <li>
+        <strong>Out of hours:</strong> Critical services, for example flood
+        warnings or disease reporting, require 24/7 support coverage.
+      </li>
+    </ul>
+    ' } }, { heading: { text: "15. Minimise environmental impact
+    (Sustainability)" }, content: { html: sustainabilityContent } } ] }) }}
 
     <h2 class="govuk-heading-m">Get help with the standard</h2>
 
     <p class="govuk-body">
-
-      If you are unsure if your service meets the standard, book a <a href="#">pre-assessment clinic</a>.
-
+      If you are unsure if your service meets the standard, book a
+      <a href="#">pre-assessment clinic</a>.
     </p>
-
-
-
   </div>
-
 </div>
-
-
 
 {% endblock %}

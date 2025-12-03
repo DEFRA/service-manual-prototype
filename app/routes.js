@@ -31,6 +31,10 @@ router.get('/working-with-defra', function (req, res) {
   res.render('manual/working-with-defra')
 })
 
+router.get('/architecture-and-software-development', function (req, res) {
+  res.render('manual/architecture-and-software-development')
+})
+
 router.get('/service-manual', function (req, res) {
   res.render('service-manual-home')
 })
